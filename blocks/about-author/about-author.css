@@ -1,0 +1,9 @@
+@import url(./__text/about-author__text.css);
+@import url(./__title/about-author__title.css);
+@import url(./__container/about-author__container.css);
+@import url(./__img/about-author__img.css);
+
+.about-author {
+    display: flex;
+    margin-bottom: 80px;
+}

@@ -1,0 +1,7 @@
+.about-author__container {
+    margin-top: 131px;
+    margin-left: 56px;
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+}

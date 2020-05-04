@@ -1,0 +1,10 @@
+.header__page_pg_no-active {
+    margin-left: 34px;
+    margin-right: auto;
+    color: #B6BCBF;    
+}
+
+.header__page_pg_no-active:hover {
+    color: white;
+}
+

@@ -1,0 +1,11 @@
+@import url(../footer/__icons/footer__icons.css);
+@import url(../footer/__link/footer__link.css);
+@import url(../footer/__signature/footer__signature.css);
+@import url(../footer/__url/footer__url.css);
+@import url(../footer/__icon/footer__icon.css);
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
