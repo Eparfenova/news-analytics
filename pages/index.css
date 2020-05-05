@@ -5,11 +5,13 @@
 @import url(../blocks/about-author/about-author.css);
 @import url(../blocks/preloader/preloader.css);
 @import url(../blocks/not-found/not-found.css);
+@import url(../blocks/result/result.css);
 
 
 
 
 .page {
+    
     max-width: 1440px;
     margin: auto;    
 }

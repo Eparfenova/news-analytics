@@ -1,0 +1,13 @@
+.result__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #1A1B22;
+    text-decoration: none;
+    margin-bottom: 72px;
+    margin-right: 104px;
+    margin-top: 14px;
+}

@@ -1,0 +1,11 @@
+.result__cards {
+    max-width: 1332px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    
+}
