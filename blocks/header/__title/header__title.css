@@ -1,11 +1,9 @@
 .header__title {
+    margin-left: 104px;
+    margin-bottom: 0;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 104px;
 }

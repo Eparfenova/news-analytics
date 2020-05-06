@@ -6,12 +6,13 @@
 @import url(../blocks/preloader/preloader.css);
 @import url(../blocks/not-found/not-found.css);
 @import url(../blocks/result/result.css);
+@import url(../blocks/header/_theme/_dark/header_theme_dark.css);
+
 
 
 
 
 .page {
-    
     max-width: 1440px;
     margin: auto;    
 }
