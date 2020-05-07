@@ -7,17 +7,44 @@
     <title>main</title>
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="pages/index.css">
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    <script src="/path/to/flickity.pkgd.min.js"></script>
     
 </head>
 <body>
     <div class="page">
-            <header class="header header_theme_dark">
-                <h1 class="header__title">NewsAnalyzer</h1>
-                <div class="header__pages">
-                    <a href="main.html" class="header__page header__page_theme_dark">Главная</a>
-                    <a href="about.html" class="header__page header__page_theme_dark header__page_theme_dark_pg_active">О проекте</a>
+        <header class="header header_theme_dark">
+            <h1 class="header__title">NewsAnalyzer</h1>
+            <div class="header__pages">
+                <a href="main.html" class="header__page header__page_theme_dark">Главная</a>
+                <a href="about.html" class="header__page header__page_theme_dark header__page_theme_dark_pg_active">О проекте</a>
+            </div>
+        </header>
+
+        <section class="clients">
+            <div class="clients__content">
+                <h2 class="clients__title">Клиентам</h2>
+                <p class="clients__text">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
+                <p class="clients__text">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+                <p class="clients__text">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+                <p class="clients__text">При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.</p>
+                <p class="clients__text">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>   
+            </div>
+        </section>
+
+        <section class="tech">
+            <div class="tech__content">
+                <h2 class="tech__title">Используемые технологии</h2>
+                <div class="tech__images-container">
+                    <img src="./images/HTML.svg" alt="HTML" class="tech__img">
+                    <img src="./images/CSS.svg" alt="CSSL" class="tech__img">
+                    <img src="./images/JS.svg" alt="JS" class="tech__img">
+                    <img src="./images/WebPack.svg" alt="WebPack" class="tech__img">
                 </div>
-            </header>
+            </div>
+        </section>
+
+    
 
         <section class="about-author">
             <img class="about-author__img" src="./images/avatar.jpg" alt="аватар">
@@ -28,6 +55,22 @@
             </div>
         </section>
 
+        <section class="comments">
+            <div class="comments__content">
+                <h2 class="comments__title">История коммитов из GitHub</h2>
+                <a href="https://github.com/" class="comments__link">Открыть в  Github ></a>
+            </div>
+            <div class="main-carousel">
+                <div class="carousel-cell">
+                    
+                </div>
+                <div class="carousel-cell">
+                    
+                </div>
+            </div>
+
+        </section>
+        
         <footer class="footer">
             <p class="footer__signature">©2020 Supersite</p>
             <div class="footer__link">

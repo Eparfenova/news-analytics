@@ -7,8 +7,16 @@
 @import url(../blocks/not-found/not-found.css);
 @import url(../blocks/result/result.css);
 @import url(../blocks/header/_theme/_dark/header_theme_dark.css);
+@import url(../blocks/clients/clients.css);
+@import url(../blocks/tech/tech.css);
+@import url(../blocks/comments/comments.css);
 
-
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../fonts-frontend/robotoslab-regular.woff);
+    font-style: normal;
+    font-weight: normal;
+}
 
 
 
