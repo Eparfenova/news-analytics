@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style:  normal;
+    font-weight: 500;
+    src: url("./fonts-frontend/roboto-medium.woff") format("woff2");
+  }
+  
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style:  normal;
+    font-weight: bold;
+    src: url("./fonts-frontend/robotoslab-regular.woff") format("woff2");
+  }
+
+  @font-face {
+    font-family: 'Roboto slab';
+    font-style:  normal;
+    font-weight: normal;
+    src: url("./fonts-frontend/robotoslab-regular.woff") format("woff2");
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style:  normal;
+    font-weight: normal;
+    src: url("./fonts-frontend/roboto-regular.woff") format("woff2");
+  }

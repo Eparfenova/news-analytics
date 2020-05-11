@@ -1,7 +1,0 @@
-@import url(./__content/comments__content.css);
-@import url(./__link/comments__link.css);
-@import url(./__title/comments__title.css);
-
-.comments {
-    background: #F5F6F7;
-}

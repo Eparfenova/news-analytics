@@ -1,0 +1,19 @@
+@import url(../blocks/search-content/search-content.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/about-author/about-author.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/about-author/about-author.css);
+@import url(../blocks/preloader/preloader.css);
+@import url(../blocks/not-found/not-found.css);
+@import url(../blocks/result/result.css);
+@import url(../blocks/header/_theme/_dark/header_theme_dark.css);
+@import url(../blocks/clients/clients.css);
+@import url(../blocks/tech/tech.css);
+@import url(../blocks/comments/comments.css);
+
+
+
+.page {
+    max-width: 1440px;
+    margin: auto;    
+}
