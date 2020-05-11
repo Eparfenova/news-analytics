@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>main</title>
-    <link rel="stylesheet" href="./vendor/normalize.css">
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
     
 </head>
 <body>
@@ -15,7 +14,7 @@
             <header class="header">
                 <h1 class="header__title">NewsAnalyzer</h1>
                 <div class="header__pages">
-                    <a href="./main.html" class="header__page header__page_pg_active">Главная</a>
+                    <a href="./index.html" class="header__page header__page_pg_active">Главная</a>
                     <a href="./about.html" class="header__page">О проекте</a>
                 </div>
             </header>
@@ -106,6 +105,6 @@
             </div>
         </footer>
     </div>
-    <script src="<%= htmlWebpackPlugin.files.js %>"></script> 
+    <script src="<%=htmlWebpackPlugin.files.js%>"></script> 
 </body>
 </html>

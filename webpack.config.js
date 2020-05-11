@@ -52,7 +52,7 @@ module.exports = {
   },
   plugins: [ 
     new MiniCssExtractPlugin({ 
-        filename: '[name].[contenthash].css',
+        filename: 'index.[contenthash].css',
       }),
       new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.css$/g,
@@ -71,6 +71,11 @@ module.exports = {
         inject: false,
         template: './src/about.html',
         filename: 'about.html'
+      }),
+      new HtmlWebpackPlugin({
+        inject: false,
+        template: './src/analytics.html',
+        filename: 'analytics.html'
       }),
       new WebpackMd5Hash(),
   

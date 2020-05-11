@@ -1,8 +1,9 @@
 @import url(./__title/header__title.css);
 @import url(./__page/header__page.css);
-@import url(./__page/_pg/_active/header__page_pg_active.css);
+@import url(./_theme/_dark/header_theme_dark.css);
 @import url(./__page/_theme/_dark/header__page_theme_dark.css);
-@import url(./__page/_theme/_dark/_pg/_active/header__page_theme_dark_pg_active.css);
+@import url(./__page/_pg/_active/header__page_pg_active.css);
+
 
 
 .header {
@@ -12,7 +13,7 @@
     align-items: center;
     font-family: Roboto, Arial, sans-serif;
     padding-top: 30px;
-    padding-bottom: 23px;
+    padding-bottom: 22px;
     padding-right: 67px;
     color: #FFFFFF;
     border-bottom: 0.1px solid rgba(196, 196, 196, 0.01);

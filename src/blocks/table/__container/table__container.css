@@ -1,0 +1,6 @@
+.table__container {
+    max-width: 192px;
+    display: flex;
+    justify-content: space-between;
+    
+}

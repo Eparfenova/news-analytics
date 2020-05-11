@@ -1,3 +1,6 @@
+@import url(../blocks/header/header.css);
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
 @import url(../blocks/search-content/search-content.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/about-author/about-author.css);
@@ -10,6 +13,9 @@
 @import url(../blocks/clients/clients.css);
 @import url(../blocks/tech/tech.css);
 @import url(../blocks/comments/comments.css);
+@import url(../blocks/request/request.css);
+@import url(../blocks/table/table.css);
+
 
 
 
