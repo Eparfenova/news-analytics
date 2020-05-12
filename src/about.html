@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>main</title>
-    <link rel="stylesheet" href="./flickity-docs/css/flickity-docs.css" media="screen">
+    <link rel="stylesheet" href="../node_modules/flickity/dist/flickity.css" media="screen">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
     
 </head>
@@ -58,7 +58,7 @@
                 <h2 class="comments__title">История коммитов из GitHub</h2>
                 <a href="https://github.com/" class="comments__link">Открыть в  Github ></a>
             </div>
-            <div class="main-carousel">
+            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true}'>
                 <div class="carousel-cell">
                     <div class="comments__card">
                         <p class="comments__date">14 августа, 2019</p>
@@ -111,8 +111,34 @@
                         <p class="comments__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
                     </div>
                 </div>
+                <div class="carousel-cell">
+                    <div class="comments__card">
+                        <p class="comments__date">14 августа, 2019</p>
+                        <div class="comments__about-author">
+                            <img class="comments__avatar" src="<%=require('./images/anton.jpg').default%>" alt="author">
+                            <div class="comments__paragraph">
+                                <h2 class="comments__author">Антон Долинин</h2>
+                                <h3 class="comments__mail">anton@yandex.ru</h3>
+                        </div>
+                        </div>
+                        <p class="comments__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <div class="comments__card">
+                        <p class="comments__date">14 августа, 2019</p>
+                        <div class="comments__about-author">
+                            <img class="comments__avatar" src="<%=require('./images/anton.jpg').default%>" alt="author">
+                            <div class="comments__paragraph">
+                                <h2 class="comments__author">Антон Долинин</h2>
+                                <h3 class="comments__mail">anton@yandex.ru</h3>
+                        </div>
+                        </div>
+                        <p class="comments__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                    </div>
+                </div>
+              
             </div>
-
         </section>
         
         <footer class="footer">
@@ -131,6 +157,6 @@
         </footer>
     </div>
     <script src="<%=htmlWebpackPlugin.files.js%>"></script> 
-    <script src="./flickity-docs/flickity.pkgd.min.js"></script>
+    <script src="../node_modules/flickity/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>

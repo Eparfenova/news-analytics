@@ -1,5 +1,6 @@
 .comments__text {
-    
+    max-width: 352px;
+    margin-bottom: 0;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;

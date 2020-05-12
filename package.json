@@ -7,6 +7,7 @@
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.4.1",
     "file-loader": "^6.0.0",
+    "flickity": "^2.2.1",
     "image-webpack-loader": "^6.0.0",
     "style-loader": "^1.2.1"
   },
