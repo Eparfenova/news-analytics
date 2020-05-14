@@ -24,3 +24,16 @@
 .search__button:active {
     background: #2A65CC;
 }
+
+@media screen and (max-width: 767px) {
+    .search__button {
+        margin-top: 82px;
+        width: 100%;
+
+    }
+}
+
+
+
+
+

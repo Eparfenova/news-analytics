@@ -7,3 +7,17 @@
     display: flex;
     margin-bottom: 80px;
 }
+
+@media screen and (max-width: 425px) {
+    .about-author {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 426px) and  (max-width: 767px) {
+    .about-author {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}

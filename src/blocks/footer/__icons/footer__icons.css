@@ -1,6 +1,34 @@
 .footer__icons {
+    width: 63px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 80px;
+    margin-left: 310px;
+}
+
+@media screen and (max-width: 425px) {
+    .footer__icons {
+        padding-top: 11px;
+        margin-right: 16px;
+        margin-left: 34px;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .footer__icons {
+        padding-top: 11px;
+        margin-right: 16px;
+        margin-left: 34px;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__icons {
+        margin-left: 69px;
+        margin-right: 12px;
+       
+    }
 }

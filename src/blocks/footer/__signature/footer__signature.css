@@ -6,4 +6,22 @@
     line-height: 22px;
     color: #B6BCBF;
     margin-left: 104px;
+}
+
+@media screen and (max-width: 425px) {
+    .footer__signature {
+        margin-left: 0px; 
     }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .footer__signature {
+        margin-left: 0px; 
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__signature {
+        margin-left: 0px; 
+    }
+}

@@ -3,10 +3,39 @@
 @import url(../footer/__signature/footer__signature.css);
 @import url(../footer/__url/footer__url.css);
 @import url(../footer/__icon/footer__icon.css);
+@import url(../footer/__content/footer__content.css);
+
 
 .footer {
     display: flex;
     justify-content: space-between;
     padding-bottom: 28px;
     padding-top: 30px;
+}
+
+@media screen and (max-width: 425px) {
+    .footer {
+        flex-direction: column-reverse;
+        padding-bottom: 22px;
+        padding-top: 20px;
+        padding-left: 16px;
+  
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .footer {
+        flex-direction: column-reverse;
+        padding-bottom: 22px;
+        padding-top: 20px;
+        padding-left: 16px;
+       
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+        padding-left: 40px; 
+       
+    }
 }

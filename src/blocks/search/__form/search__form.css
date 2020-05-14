@@ -7,3 +7,23 @@
     margin-right: auto;
     position: relative;
 }
+
+
+@media screen and (max-width: 767px) {
+    .search__form {
+        margin-top: 64px;
+        width: 288px;
+        height: 64px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .search__form {
+        width: 448px;
+        height: 56px;
+        margin-top: 24px;
+        margin-bottom: 48px;
+    }
+}

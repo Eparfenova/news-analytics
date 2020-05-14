@@ -9,4 +9,41 @@
     color: #1A1B22;
     text-decoration: none;
     padding-bottom: 0;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 425px) {
+    .footer__url {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        line-height: 48px;
+        text-align: start;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .footer__url {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        text-align: start;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__url {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        line-height: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .footer__url {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        line-height: 24px;
+        margin-right: 24px;
+    }
 }

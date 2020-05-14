@@ -8,6 +8,12 @@
 .search {
     display: flex;
     flex-direction: column;
+}
 
 
+
+@media screen and (max-width: 767px) {
+    .search {
+        padding-bottom: 32px;
+    }
 }
