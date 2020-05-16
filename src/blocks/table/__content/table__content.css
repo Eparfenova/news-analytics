@@ -1,7 +1,31 @@
 .table__content {
-    
     padding-top: 80px;
     background: #F5F6F7;
     padding-left: 104px;
     padding-bottom: 80px;
+}
+
+@media screen and (max-width: 425px) {
+    .table__content {
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-bottom: 0;
+
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .table__content {
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .table__content {
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-bottom: 40;
+    }
 }

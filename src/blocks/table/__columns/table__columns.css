@@ -6,3 +6,27 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 425px) {
+    .table__columns {
+        margin-left: 0;
+        padding-top: 11px;
+        padding-bottom: 11px;
+
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .table__columns {
+        margin-left: 0;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+    .table__columns {
+        padding-top: 26px;
+        padding-bottom: 30px;
+    }
+}
