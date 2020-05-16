@@ -9,9 +9,31 @@
 @import url(./__text/comments__text.css);
 @import url(./__about-author/comments__about-author.css);
 @import url(./__paragraph/comments__paragraph.css);
+@import url(./__button/comments__button.css);
+@import url(./__button-link/comment__button-link.css);
+
 
 
 .comments {
     background: #F5F6F7;
     padding-bottom: 136px;
+}
+
+@media screen and (max-width: 425px) {
+    .comments {
+        padding-bottom: 32px;
+
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .comments {
+        padding-bottom: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .comments {
+        padding-bottom: 80px;
+    }
 }

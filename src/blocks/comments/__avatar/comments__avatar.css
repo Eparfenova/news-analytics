@@ -1,3 +1,21 @@
 .comments__avatar {
     max-width: 64px;
 }
+
+@media screen and (max-width: 425px) {
+    .comments__avatar {
+        max-width: 48px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .comments__avatar {
+        max-width: 48px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .comments__avatar {
+
+    }
+}

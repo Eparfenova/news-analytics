@@ -10,3 +10,30 @@
     border-radius: 16px;
     margin-bottom: 48px;
 }
+
+
+@media screen and (max-width: 425px) {
+    .comments__card {
+        width: 288px;
+        height: 264px;
+        margin-right: 8px;
+        margin-left: 8px;
+        padding-top: 16px;
+        padding-left: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .comments__card {
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .comments__card {
+
+
+    }
+}
+
