@@ -1,6 +1,6 @@
 .search__text {
     max-width: 585px;
-    margin-left: auto;
+    margin-left: 416px;
     margin-right: auto;
     margin-bottom: 0;
     margin-top: 0;
@@ -30,9 +30,16 @@
         margin-right: 100px;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 790px) {
     .search__text {
         margin-left: 160px;
         margin-right: 156px;
+    }
+}
+
+@media screen and (min-width: 791px) and (max-width: 1200px) {
+    .search__text {
+        width: 448px;
+        margin-left: auto;
     }
 }

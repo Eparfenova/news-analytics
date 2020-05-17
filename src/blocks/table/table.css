@@ -10,3 +10,7 @@
 @import url(./__subtitle/table__subtitle.css);
 @import url(./__title/table__title.css);
 @import url(./__scale/_position/_down/table__scale_position_down.css);
+
+.table {
+    font-family: Roboto, Arial, sans-serif;
+}

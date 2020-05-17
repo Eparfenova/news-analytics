@@ -33,11 +33,21 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 790px) {
     .search__title {
         margin-top: 40px;
         margin-bottom: 16px;
         margin-left: 163px;
     }
 }
+@media screen and (min-width: 791px) and (max-width: 1200px) {
+    .search__title {
+        width: 448px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
 

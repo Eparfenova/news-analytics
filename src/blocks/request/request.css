@@ -4,3 +4,7 @@
 @import url(./__page/_pg/_active/request__page_pg_avtive.css);
 @import url(./__statistics/request__statistics.css);
 @import url(./__title/request__title.css);
+
+.request {
+    font-family: Roboto, Arial, sans-serif;
+}

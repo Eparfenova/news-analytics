@@ -8,6 +8,7 @@
 .search {
     display: flex;
     flex-direction: column;
+    font-family: Roboto, Arial, sans-serif;
 }
 
 

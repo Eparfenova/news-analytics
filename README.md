@@ -1,6 +1,6 @@
 # news-analytics.github.io
 
-  Версия 0.0.1
+  Версия 0.0.2
   
   Ссылка на репозиторий: https://github.com/Eparfenova/news-analytics.git
 

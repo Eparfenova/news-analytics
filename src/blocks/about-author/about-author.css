@@ -6,6 +6,8 @@
 .about-author {
     display: flex;
     margin-bottom: 80px;
+    font-family: Roboto, Arial, sans-serif;
+
 }
 
 @media screen and (max-width: 425px) {

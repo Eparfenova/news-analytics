@@ -1,6 +1,6 @@
 {
   "name": "diplom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "https://github.com/Eparfenova/news-analytics.git",
   "main": "./src/index.js",
   "dependencies": {
