@@ -1,11 +1,11 @@
-import { NEWS_FORMAT_DATE } from '../constants/constants';
+import { DateUtils } from '../utils/DateUtils';
 
 export class NewsApi {
     constructor(config) {
         this.config = config;
     }
     getNews(searchInput) {
-        return fetch(`${this.config.url}?q=${searchInput}&from=${this.getDate()}&sortBy=publishedAt&apiKey=${this.config.apiKey}`)
+        return fetch(`${this.config.url}?q=${searchInput}&from=${DateUtils.formatDate()}&sortBy=publishedAt&apiKey=${this.config.apiKey}`)
           .then(res => {
             if (res.status === "ok") {
               return res.articles.json();
@@ -17,9 +17,5 @@ export class NewsApi {
           });
     }
 
-    getDate() {
-        let todayDate = new Date();
-        todayDate.setDate(todayDate.getDate() - this.config.dateLag);
-        return todayDate.format(NEWS_FORMAT_DATE);
-    }
+   
 }
