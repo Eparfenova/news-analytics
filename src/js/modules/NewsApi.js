@@ -4,7 +4,10 @@ export class NewsApi {
     constructor(config) {
         this.config = config;
     }
+    
     getNews(searchInput) {
+      console.log(`${this.config.url}?q=${searchInput}&from=${DateUtils.formatDate()}&sortBy=publishedAt&apiKey=${this.config.apiKey}`);
+      if (searchInput) {
         return fetch(`${this.config.url}?q=${searchInput}&from=${DateUtils.formatDate()}&sortBy=publishedAt&apiKey=${this.config.apiKey}`)
           .then(res => {
             if (res.status === "ok") {
@@ -15,6 +18,7 @@ export class NewsApi {
           .catch((err) => {
             console.log(err);
           });
+        }
     }
 
    

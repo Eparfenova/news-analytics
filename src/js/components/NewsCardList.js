@@ -20,7 +20,7 @@ export class NewsCardList {
         let max = this.cardsCount + 3;
         const newsCards = this.dataStorage.getData('newsData');
       for (let i = min; i < max; i++) {
-        if (i < newsCards.length) {
+        if (newsCards && i < newsCards.length) {
             this.render(newsCards[i]);
         } 
       }

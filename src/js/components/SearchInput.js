@@ -1,15 +1,16 @@
 export class SearchInput {
-    constructor(searchContent, newsApi, dataStorage, cardList) {
+    constructor(page, newsApi, dataStorage, cardList) {
         this.dataStorage = dataStorage;
-        this.searchContent = searchContent;
+        this.page = page;
+        const searchContent = this.page.querySelector('.search-content');
         this.newsApi = newsApi;
-        const search = this.searchContent.querySelector('.search');
+        const search = searchContent.querySelector('.search');
         const searchForm = search.querySelector('.search__form');
         this.searchInput = searchForm.querySelector('.search__input');
         this.searchButton = searchForm.querySelector('.search__button');
-        this.preloader = this.searchContent.querySelector('.preloader');
-        this.notFound = this.searchContent.querySelector('.not-found');
-        this.result = this.searchContent.querySelector('.result');
+        this.preloader = this.page.querySelector('.preloader');
+        this.notFound = this.page.querySelector('.not-found');
+        this.result = this.page.querySelector('.result');
         this.resultButton = this.result.querySelector('.result__button');
         this.cardList = cardList;
 
