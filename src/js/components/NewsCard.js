@@ -32,4 +32,9 @@ export class NewsCard {
         card.appendChild(paragraph);
         this.card = card;
       }
+      
+      getCard() {
+        return this.card;
+      }
+
 }

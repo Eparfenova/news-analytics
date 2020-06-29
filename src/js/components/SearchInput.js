@@ -1,5 +1,5 @@
 export class SearchInput {
-    constructor(searchContent, newsApi, dataStorage) {
+    constructor(searchContent, newsApi, dataStorage, cardList) {
         this.dataStorage = dataStorage;
         this.searchContent = searchContent;
         this.newsApi = newsApi;
@@ -10,19 +10,26 @@ export class SearchInput {
         this.preloader = this.searchContent.querySelector('.preloader');
         this.notFound = this.searchContent.querySelector('.not-found');
         this.result = this.searchContent.querySelector('.result');
+        this.resultButton = this.result.querySelector('.result__button');
+        this.cardList = cardList;
+
     }
     search() {
         const searchInputValue = this.searchInput.value;
-        this.newsApi.getNews(searchInputValue);
-        then((result) => {
-            if (result){ 
+        this.preloader.setAttribute('disabled', false);
+        this.result.setAttribute('disabled', true);
+        this.notFound.setAttribute('disabled', true);
+        this.cardList.clear();
+        this.newsApi.getNews(searchInputValue)
+        .then((result) => {
+            if (result) { 
                 if(result.length() === 0) {
                     this.notFound.setAttribute('disabled', false);
                     this.preloader.setAttribute('disabled', true);
                     this.result.setAttribute('disabled', true);
                 } else { 
                     this.dataStorage.setData('newsData', result);
-                    
+                    this.cardList.getCards();
                     this.notFound.setAttribute('disabled', true);
                     this.preloader.setAttribute('disabled', true);
                     this.result.setAttribute('disabled', false);
@@ -30,4 +37,10 @@ export class SearchInput {
             }
         })
     };
+
+    setEvenListeners() {
+        this.searchButton.addEventListener('click', this.search());
+        this.resultButton.addEventListener('click', this.cardList.getCards());
+
+    }
 }
