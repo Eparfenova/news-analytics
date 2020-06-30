@@ -15,7 +15,7 @@ export class NewsCard {
         const date = document.createElement('p');
         date.classList.add("result__date");
         date.textContent = this.dataCard.publishedAt;
-        const subtitle = document.createElement(h3);
+        const subtitle = document.createElement('h3');
         subtitle.classList.add("result__subtitle");
         subtitle.textContent = this.dataCard.title;
         const description = document.createElement('p');
@@ -23,7 +23,7 @@ export class NewsCard {
         description.textContent = this.dataCard.content;
         const source = document.createElement('p');
         source.classList.add("result__source");
-        source.textContent = this.dataCard.source;
+        source.textContent = this.dataCard.source.name;
         card.appendChild(image);
         paragraph.appendChild(date);
         paragraph.appendChild(subtitle);

@@ -5,11 +5,11 @@ export class DataStorage {
     }
 
     setData(key, value) {
-        this.storage.setItem(key, value);
+        this.storage.setItem(key, JSON.stringify(value));
     }
 
     getData(key) {
-       return this.storage.getItem(key);
+       return JSON.parse(this.storage.getItem(key));
 
     }
 

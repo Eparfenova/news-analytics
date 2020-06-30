@@ -10,10 +10,14 @@ export class NewsApi {
       if (searchInput) {
         return fetch(`${this.config.url}?q=${searchInput}&from=${DateUtils.formatDate()}&sortBy=publishedAt&apiKey=${this.config.apiKey}`)
           .then(res => {
-            if (res.status === "ok") {
-              return res.articles.json();
-            }
-            return Promise.reject("Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.");
+            if (res.status !== 200) {
+              return Promise.reject("Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.");
+            }    
+            return res;       
+          })
+          .then(res => { return res.json() })
+          .then(res => {
+             return res.articles;
           })    
           .catch((err) => {
             console.log(err);

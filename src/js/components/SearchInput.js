@@ -15,33 +15,42 @@ export class SearchInput {
         this.cardList = cardList;
 
     }
-    search() {
+
+    search(event) {
+        event.preventDefault();
         const searchInputValue = this.searchInput.value;
-        this.preloader.setAttribute('disabled', false);
-        this.result.setAttribute('disabled', true);
-        this.notFound.setAttribute('disabled', true);
+        this.preloader.removeAttribute("style", "display: none");
+        this.result.setAttribute("style", "display: none");
+        this.notFound.setAttribute("style", "display: none");
         this.cardList.clear();
         this.newsApi.getNews(searchInputValue)
-        .then((result) => {
+        .then(result => {
             if (result) { 
-                if(result.length() === 0) {
-                    this.notFound.setAttribute('disabled', false);
-                    this.preloader.setAttribute('disabled', true);
-                    this.result.setAttribute('disabled', true);
+                if(result.length === 0) {
+                    this.notFound.removeAttribute("style", "display: none");
+                    this.preloader.setAttribute("style", "display: none");
+                    this.result.setAttribute("style", "display: none");
                 } else { 
                     this.dataStorage.setData('newsData', result);
                     this.cardList.getCards();
-                    this.notFound.setAttribute('disabled', true);
-                    this.preloader.setAttribute('disabled', true);
-                    this.result.setAttribute('disabled', false);
+                    this.notFound.setAttribute("style", "display: none");
+                    this.preloader.setAttribute("style", "display: none");
+                    this.result.removeAttribute("style", "display: none");
                 }
             }
         })
     };
 
+    getCards() {
+        this.cardList.getCards();
+    }
+
     setEvenListeners() {
-        this.searchButton.addEventListener('click', this.search());
-        this.resultButton.addEventListener('click', this.cardList.getCards());
+        console.log(this.searchButton);
+        const search = this.search.bind(this);
+        const getCards = this.getCards.bind(this);
+        this.searchButton.addEventListener('click', function(event) { search(event)});
+        this.resultButton.addEventListener('click', getCards);
 
     }
 }
