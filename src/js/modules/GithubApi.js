@@ -16,7 +16,7 @@ export class GithubApi {
                   map.set('avatar_url', element.author.avatar_url);
                   return map;
               });
-                return result;
+              return result;
             }
             return Promise.reject("Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.");
           })    

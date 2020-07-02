@@ -17,7 +17,18 @@ export class NewsApi {
           })
           .then(res => { return res.json() })
           .then(res => {
-             return res.articles;
+            let arr = res.articles;
+            let result = [].map.call(arr, function(element) {
+              let map = {
+                title: element.title,
+                name: element.source.name,
+                date: DateUtils.sliceDate(element.publishedAt),
+                description: element.description,
+                imageUrl: element.urlToImage
+              }
+              return map;
+            });
+             return result;
           })    
           .catch((err) => {
             console.log(err);
