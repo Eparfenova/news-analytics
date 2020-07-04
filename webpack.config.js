@@ -6,8 +6,33 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
+//  const main = {
+//   entry: { 
+//     main: './src/index',
+//   },
+//   output: {
+//     path: path.resolve(__dirname, 'dist'),
+//     filename: '[name].[chunkhash].js'
+//   }
+// }
+
+// const about = {
+//   entry: { 
+//     about: './src/about/index.js',
+//   },
+//   output: {
+//     path: path.resolve(__dirname, 'dist'),
+//     filename: '[name].[chunkhash].js'
+//   }
+// }
+
+// module.exports = [ main, about ];
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: { 
+    main: './src/index.js',
+    about: './src/about/index.js',
+    analytics: './src/analytics/index.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
@@ -65,17 +90,20 @@ module.exports = {
       new HtmlWebpackPlugin({
         inject: false,
         template: './src/index.html',
-        filename: 'index.html'
+        filename: 'index.html',
+        chunks: [ "main" ],
       }),
       new HtmlWebpackPlugin({
         inject: false,
         template: './src/about.html',
-        filename: 'about.html'
+        filename: 'about.html',
+        chunks: [ "about" ],
       }),
       new HtmlWebpackPlugin({
         inject: false,
         template: './src/analytics.html',
-        filename: 'analytics.html'
+        filename: 'analytics.html',
+        chunks: [ "analytics" ],
       }),
       new WebpackMd5Hash(),
   

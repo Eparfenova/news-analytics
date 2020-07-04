@@ -6,10 +6,11 @@ import { NewsCardList } from "./js/components/NewsCardList";
 import { DataStorage } from "./js/modules/DataStorage";
 import { SearchInput } from "./js/components/SearchInput";
 
+console.warn('I get called from MAIN!');
+
 const config = {url: NEWS_API_URL,  apiKey: NEWS_API_KEY};
 const newsApi = new NewsApi(config);
-const page = document.querySelector('.page');
-const searchContent = page.querySelector('.search-content');
+const page = document.querySelector("#main");
 const dataStorage = new DataStorage();
 
 
@@ -23,3 +24,4 @@ const resultCards = page.querySelector('.result').querySelector('.result__conten
 const newCardList = new NewsCardList(resultCards, createCard, dataStorage);
 const searchInput = new SearchInput(page, newsApi, dataStorage, newCardList);
 searchInput.setEvenListeners();
+

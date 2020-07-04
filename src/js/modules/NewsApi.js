@@ -6,7 +6,6 @@ export class NewsApi {
     }
     
     getNews(searchInput) {
-      console.log(`${this.config.url}?q=${searchInput}&from=${DateUtils.formatDate()}&sortBy=publishedAt&apiKey=${this.config.apiKey}`);
       if (searchInput) {
         return fetch(`${this.config.url}?q=${searchInput}&from=${DateUtils.formatDate()}&sortBy=publishedAt&apiKey=${this.config.apiKey}`)
           .then(res => {

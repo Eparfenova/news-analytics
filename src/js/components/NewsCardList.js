@@ -31,4 +31,6 @@ export class NewsCardList {
         this.cardsCount = 0;
         this.container.querySelectorAll('.result__card').forEach( e => e.remove() );
     }
+
+    
   }
