@@ -23,6 +23,7 @@ export class SearchInput {
         this.result.setAttribute("style", "display: none");
         this.notFound.setAttribute("style", "display: none");
         this.cardList.clear();
+        this.dataStorage.setData("searchText", searchInputValue);
         this.newsApi.getNews(searchInputValue)
         .then(result => {
             if (result) { 

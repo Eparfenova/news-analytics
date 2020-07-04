@@ -15,5 +15,14 @@ export class DateUtils {
             day: 'numeric'});
     }
 
+    static getAnalyticsDate(date) {
+        let tempDate = new Date(date);
+        let weeksDay = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+        let day = tempDate.getDay();
+        let dayNumber = tempDate.getDate();
+        return `${dayNumber}, ${weeksDay[day]}`
+
+    }
+
 
 }
