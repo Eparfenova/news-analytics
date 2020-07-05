@@ -6,7 +6,6 @@ import { NewsCardList } from "./js/components/NewsCardList";
 import { DataStorage } from "./js/modules/DataStorage";
 import { SearchInput } from "./js/components/SearchInput";
 
-console.warn('I get called from MAIN!');
 
 const config = {url: NEWS_API_URL,  apiKey: NEWS_API_KEY};
 const newsApi = new NewsApi(config);

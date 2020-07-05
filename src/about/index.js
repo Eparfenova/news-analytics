@@ -5,8 +5,6 @@ import { CommitCardList } from "../js/components/CommitCardList";
 import { DataStorage } from "../js/modules/DataStorage";
 import { GithubApi } from "../js/modules/GithubApi";
 
-console.warn('I get called from ABOUT!');
-
 const config = {url: GITHUB_URL,  owner: GITHUB_OWNER, repo: GITHUB_REPO};
 const githubApi = new GithubApi(config);
 const page = document.querySelector("#about");
