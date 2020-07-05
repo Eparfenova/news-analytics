@@ -15,7 +15,7 @@ export class CommitCard {
         const avatar = document.createElement('img');
         avatar.classList.add("comments__avatar");
         avatar.setAttribute("src", `${this.dataCard.avatar_url}`);
-        avatar.setAttribute("alt", "Изображение не найдено");
+        avatar.setAttribute("alt", "Avatar GitHub");
         const paragraph = document.createElement('div');
         paragraph.classList.add("comments__paragraph");
         const author = document.createElement('h2');
