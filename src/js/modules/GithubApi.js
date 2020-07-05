@@ -22,7 +22,7 @@ export class GithubApi {
                   email: element.commit.committer.email,
                   date: DateUtils.sliceDate(element.commit.committer.date),
                   message: element.commit.message,
-                  avatar_url: element.author.avatar_url
+                  avatar_url: element.author && element.author.avatar_url
                 }
                 return map;
               });
