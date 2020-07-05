@@ -1,5 +1,7 @@
 .comments__mail {
     max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
     font-family: Roboto;
     font-style: normal;

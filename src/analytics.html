@@ -10,7 +10,7 @@
     
 </head>
 <body>
-    <div class="page">
+    <div class="page" id="analytics">
         <header class="header header_theme_dark">
             <h1 class="header__title">NewsAnalyzer</h1>
             <div class="header__pages">
@@ -25,12 +25,12 @@
                     <a href="index.html" class="request__page">Главная </a>
                     <a href="analytics.html" class="request__page request__page_pg_active">/ Аналитика</a>
                 </div>
-                <h2 class="request__title">Вы спросили: «Путешествия»</h2>
-                <h3 class="request__statistics">Новостей за неделю: 
-                   <span><b>34 324</b></span>
+                <h2 class="request__title">Вы спросили: «»</h2>
+                <h3 class="request__statistics" id="newsCount">Новостей за неделю: 
+                   <span><b></b></span>
                 </h3>
-                <h3 class="request__statistics">Упоминаний в загаловках: 
-                    <span><b>235</b></span>
+                <h3 class="request__statistics" id="titleCount">Упоминаний в заголовках: 
+                    <span><b></b></span>
                 </h3>
             </div>
         </section>
@@ -39,15 +39,15 @@
             <div class="table__content">
                 <h2 class="table__title">Аналитика по дням</h2>
                 <div class="table__container">
-                    <h3 class="table__subtitle">Дата (Август)</h3>
+                    <h3 class="table__subtitle" id="month">Дата</h3>
                     <h3 class="table__subtitle">Количество Упоминаний</h3>
                 </div>
                 <div class="table__scale">
-                    <p class="table__scale-length">0</p>
-                    <p class="table__scale-length">25</p>
-                    <p class="table__scale-length">50</p>
-                    <p class="table__scale-length">75</p>
-                    <p class="table__scale-length">100</p>
+                    <p class="table__scale-length"></p>
+                    <p class="table__scale-length"></p>
+                    <p class="table__scale-length"></p>
+                    <p class="table__scale-length"></p>
+                    <p class="table__scale-length"></p>
                 </div>
                 <div class="table__histogram">
                     <div class="table__date">
@@ -84,8 +84,8 @@
             <p class="footer__signature">©2020 Supersite</p>
             <div class="footer__content">
                 <div class="footer__link">
-                    <a class="footer__url"  href="">Главная</a>
-                    <a class="footer__url"  href="">О проекте</a>
+                    <a class="footer__url"  href="index.html">Главная</a>
+                    <a class="footer__url"  href="./about.html">О проекте</a>
                     <a class="footer__url"  href="https://praktikum.yandex.ru">Яндекс.Практикум</a>
                 </div>
                 <div class="footer__icons">
@@ -97,7 +97,7 @@
             </div>
         </footer>
     </div>
-    <script src="<%=htmlWebpackPlugin.files.js%>"></script> 
     <script src="./flickity-docs/flickity.pkgd.min.js"></script>
+    <script src="<%=htmlWebpackPlugin.files.js%>"></script> 
 </body>
 </html>
