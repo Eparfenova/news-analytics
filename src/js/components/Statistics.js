@@ -32,7 +32,7 @@ export class Statistics {
         let maxCount = 0;
         for (let i = 0; i < NEWS_API_DATE_LAG; i++) {
             let checkDate  = new Date(date);
-            checkDate.setDate(date.getDate() - i);
+            checkDate.setDate(date.getDate() - i + 1);
             checkDate = DateUtils.sliceDate(checkDate);
             const result = arr.filter(e => e.title && e.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0 && checkDate == e.date);
             if (maxCount < result.length) {
@@ -42,6 +42,35 @@ export class Statistics {
         return maxCount;
         
     }
+
+    setTableScale(obj, maxCount) {
+        let tableScaleTopArray = Array.from(obj.querySelectorAll('.table__scale-length'));
+        tableScaleTopArray.reduce(function(percent, e) {
+            let value = Math.ceil(maxCount * percent);
+            if ((value === 0 && percent != 0) || (value === maxCount && percent != 1) || (value ===  Math.ceil(maxCount * (percent + 0.25)))) {
+                value = "";
+            } 
+             e.textContent = value;
+             return percent + 0.25;
+        }, 0);
+    }
+
+    setTableColumn(arr, obj, searchText, maxCount) {
+        const date = new Date();
+        let tableColumnArray = Array.from(obj.querySelectorAll('.table__column'));
+            tableColumnArray.reduce(function(day, e) {
+                let checkDate  = new Date(date);
+                checkDate.setDate(date.getDate() - day + 1);
+                checkDate = DateUtils.sliceDate(checkDate);
+                const result = arr.filter(e => e.title && e.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0 && checkDate == e.date);
+                const count = result.length;
+                e.textContent = count;
+                const width = Math.floor(count / maxCount * 100);
+                e.setAttribute("style", `width: ${width}%;`);
+                return day - 1;
+            }, NEWS_API_DATE_LAG);
+    }
+
 
     getAnalytics() {
         const newsData = this.dataStorage.getData('newsData');
@@ -58,16 +87,8 @@ export class Statistics {
         const tableContent = this.container.querySelector('.table').querySelector('.table__content');
         const tableScaleTop = tableContent.querySelector('.table__scale');
         const tableScaleDown = tableContent.querySelector('.table__scale_position_down');
-        let tableScaleTopArray = Array.from(tableScaleTop.querySelectorAll('.table__scale-length'));
-        tableScaleTopArray.reduce(function(persent, e) {
-             e.textContent = Math.ceil(maxCount * persent);
-             return persent + 0.25;
-        }, 0);
-        let tableScaleDownArray = Array.from(tableScaleDown.querySelectorAll('.table__scale-length'));
-        tableScaleDownArray.reduce(function(persent, e) {
-            e.textContent = Math.ceil(maxCount * persent);
-            return persent + 0.25;
-        }, 0);
+        this.setTableScale(tableScaleTop, maxCount);
+        this.setTableScale(tableScaleDown, maxCount);
         const tableHistogram = tableContent.querySelector('.table__histogram');
         const tableDate = tableHistogram.querySelector('.table__date');
         let tableDateArray = Array.from(tableDate.querySelectorAll('.table__day'));
@@ -77,6 +98,14 @@ export class Statistics {
             e.textContent = DateUtils.getAnalyticsDate(date);
             return day - 1;
         }, NEWS_API_DATE_LAG);
+        const tableColumns = tableContent.querySelector('.table__columns');
+        this.setTableColumn(newsData, tableColumns, searchText, maxCount); 
+        const tableSubtitle = tableContent.querySelector('.table__container').querySelector('#month');
+        const date = new Date();
+        const tableMonth = date.toLocaleString('default', { month: 'long' });
+        tableSubtitle.textContent = `Дата (${tableMonth})`;
+
+
     }
 
 

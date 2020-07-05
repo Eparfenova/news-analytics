@@ -22,9 +22,10 @@
             <section class="search">
                 <h1 class="search__title">Что в мире</br>творится?</h1>
                 <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-                <form class="search__form">
+                <form class="search__form" novalidate>
                     <input type="text" class="search__input" placeholder="Введите тему новости" required minlength="1">
-                    <button type="submit" class="search__button">Искать</button>
+                    <button type="submit" class="search__button">Искать</button>     
+                    <span class="search__error" aria-live="polite"></span>               
                 </form>
             </section>
         </section>
@@ -95,7 +96,7 @@
             <div class="footer__content">
                 <div class="footer__link">
                     <a class="footer__url"  href="">Главная</a>
-                    <a class="footer__url"  href="">О проекте</a>
+                    <a class="footer__url"  href="./about.html">О проекте</a>
                     <a class="footer__url"  href="https://praktikum.yandex.ru">Яндекс.Практикум</a>
                 </div>
                 <div class="footer__icons">

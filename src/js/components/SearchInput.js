@@ -5,9 +5,9 @@ export class SearchInput {
         const searchContent = this.page.querySelector('.search-content');
         this.newsApi = newsApi;
         const search = searchContent.querySelector('.search');
-        const searchForm = search.querySelector('.search__form');
-        this.searchInput = searchForm.querySelector('.search__input');
-        this.searchButton = searchForm.querySelector('.search__button');
+        this.searchForm = search.querySelector('.search__form');
+        this.searchInput = this.searchForm.querySelector('.search__input');
+        this.searchButton = this.searchForm.querySelector('.search__button');
         this.preloader = this.page.querySelector('.preloader');
         this.notFound = this.page.querySelector('.not-found');
         this.result = this.page.querySelector('.result');
@@ -46,11 +46,23 @@ export class SearchInput {
         this.cardList.getCards();
     }
 
+    searchInputValidity(event) {
+        event.preventDefault();
+        const spanError = this.searchForm.querySelector('.search__error');
+        const errorMessage = "Это обязательное поле";
+        if (this.searchInput.validity.valid) {
+            this.search(event);
+            spanError.textContent = "";
+        } else {
+             spanError.textContent = errorMessage;
+        }
+        
+    }
+
     setEvenListeners() {
-        console.log(this.searchButton);
-        const search = this.search.bind(this);
+        const searchInputValidity = this.searchInputValidity.bind(this);
         const getCards = this.getCards.bind(this);
-        this.searchButton.addEventListener('click', function(event) { search(event)});
+        this.searchButton.addEventListener('click', function(event) { searchInputValidity(event)});
         this.resultButton.addEventListener('click', getCards);
 
     }
