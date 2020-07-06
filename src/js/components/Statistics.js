@@ -23,7 +23,7 @@ export class Statistics {
 
     getRequestTitleCount(arr, searchText) {
         const result = arr.filter(element => element.title && element.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0);
-        return result.length;
+        return result ? result.length : 0;
         
     }
 
