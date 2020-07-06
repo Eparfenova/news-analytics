@@ -40,14 +40,24 @@ export class SearchInput {
                 }
             }
         })
+        .catch((err) => {
+            console.log(err);
+          });
     };
 
     getCards() {
         this.cardList.getCards();
+        const newsData = this.dataStorage.getData('newsData');
+        const cardsCount = this.cardList.getsCardCount();
+        const newsCount = newsData ? newsData.length : 0;
+        if (newsCount === cardsCount) {
+            this.resultButton.setAttribute("style", "display: none");
+        }
     }
 
     searchInputValidity(event) {
         event.preventDefault();
+        this.resultButton.removeAttribute("style", "display: none");
         const spanError = this.searchForm.querySelector('.search__error');
         const errorMessage = "Это обязательное поле";
         if (this.searchInput.validity.valid) {

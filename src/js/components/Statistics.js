@@ -22,7 +22,7 @@ export class Statistics {
     }
 
     getRequestTitleCount(arr, searchText) {
-        const result = arr.filter(e => e.title && e.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0);
+        const result = arr.filter(element => element.title && element.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0);
         return result.length;
         
     }
@@ -34,7 +34,7 @@ export class Statistics {
             let checkDate  = new Date(date);
             checkDate.setDate(date.getDate() - i + 1);
             checkDate = DateUtils.sliceDate(checkDate);
-            const result = arr.filter(e => e.title && e.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0 && checkDate == e.date);
+            const result = arr.filter(element => element.title && element.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0 && checkDate == element.date);
             if (maxCount < result.length) {
                 maxCount = result.length;
             }
@@ -44,29 +44,29 @@ export class Statistics {
     }
 
     setTableScale(obj, maxCount) {
-        let tableScaleTopArray = Array.from(obj.querySelectorAll('.table__scale-length'));
-        tableScaleTopArray.reduce(function(percent, e) {
+        const tableScaleTopArray = Array.from(obj.querySelectorAll('.table__scale-length'));
+        tableScaleTopArray.reduce(function(percent, element) {
             let value = Math.ceil(maxCount * percent);
             if ((value === 0 && percent != 0) || (value === maxCount && percent != 1) || (value ===  Math.ceil(maxCount * (percent + 0.25)))) {
                 value = "";
             } 
-             e.textContent = value;
+            element.textContent = value;
              return percent + 0.25;
         }, 0);
     }
 
     setTableColumn(arr, obj, searchText, maxCount) {
         const date = new Date();
-        let tableColumnArray = Array.from(obj.querySelectorAll('.table__column'));
-            tableColumnArray.reduce(function(day, e) {
+        const tableColumnArray = Array.from(obj.querySelectorAll('.table__column'));
+            tableColumnArray.reduce(function(day, element) {
                 let checkDate  = new Date(date);
                 checkDate.setDate(date.getDate() - day + 1);
                 checkDate = DateUtils.sliceDate(checkDate);
-                const result = arr.filter(e => e.title && e.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0 && checkDate == e.date);
+                const result = arr.filter(element => element.title && element.title.toLowerCase().indexOf(searchText.toLowerCase()) >= 0 && checkDate == element.date);
                 const count = result.length;
-                e.textContent = count;
+                element.textContent = count;
                 const width = Math.floor(count / maxCount * 100);
-                e.setAttribute("style", `width: ${width}%;`);
+                element.setAttribute("style", `width: ${width}%;`);
                 return day - 1;
             }, NEWS_API_DATE_LAG);
     }
@@ -79,7 +79,7 @@ export class Statistics {
         const searchText = this.getRequestTitle();
         requestTitle.textContent = `Вы спросили: «${searchText}»`;
         const newsCount = requestContent.querySelector('#newsCount');
-        let requestNewsCount = this.getRequestNewsCount(newsData);
+        const requestNewsCount = this.getRequestNewsCount(newsData);
         newsCount.textContent = `Новостей за неделю: ${requestNewsCount}`;
         const titleCount = requestContent.querySelector('#titleCount');
         titleCount.textContent = `Упоминаний в заголовках: ${this.getRequestTitleCount(newsData, searchText)}`;
@@ -91,11 +91,11 @@ export class Statistics {
         this.setTableScale(tableScaleDown, maxCount);
         const tableHistogram = tableContent.querySelector('.table__histogram');
         const tableDate = tableHistogram.querySelector('.table__date');
-        let tableDateArray = Array.from(tableDate.querySelectorAll('.table__day'));
-        tableDateArray.reduce(function(day, e) {
+        const tableDateArray = Array.from(tableDate.querySelectorAll('.table__day'));
+        tableDateArray.reduce(function(day, element) {
             let date = new Date();
             date.setDate(date.getDate() - day + 1);
-            e.textContent = DateUtils.getAnalyticsDate(date);
+            element.textContent = DateUtils.getAnalyticsDate(date);
             return day - 1;
         }, NEWS_API_DATE_LAG);
         const tableColumns = tableContent.querySelector('.table__columns');

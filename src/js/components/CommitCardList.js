@@ -26,9 +26,12 @@ export class CommitCardList {
         this.githubApi.getCommits()
         .then(result => {
             if (result) {
-                result.forEach(e => this.render(e));
+                result.forEach(element => this.render(element));
             }
         })
+        .catch((err) => {
+            console.log(err);
+          });
     }
 
   }

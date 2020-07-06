@@ -8,7 +8,7 @@ export class DateUtils {
     }
 
     static sliceDate(date) {
-         let dateNews = new Date(date);
+         const dateNews = new Date(date);
         return dateNews.toLocaleString("ru-ru", {
             year: 'numeric',
             month: 'long',
@@ -16,13 +16,10 @@ export class DateUtils {
     }
 
     static getAnalyticsDate(date) {
-        let tempDate = new Date(date);
-        let weeksDay = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
-        let day = tempDate.getDay();
-        let dayNumber = tempDate.getDate();
+        const tempDate = new Date(date);
+        const weeksDay = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+        const day = tempDate.getDay();
+        const dayNumber = tempDate.getDate();
         return `${dayNumber}, ${weeksDay[day]}`
-
     }
-
-
 }

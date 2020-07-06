@@ -5,3 +5,4 @@ export const NEWS_FORMAT_DATE = 'YYYY-MM-DD';
 export const GITHUB_OWNER = "Eparfenova"
 export const GITHUB_REPO = "news-analytics";
 export const GITHUB_URL = "https://api.github.com";
+export const NEWS_ROW_COUNT = 3;

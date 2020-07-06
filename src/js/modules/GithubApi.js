@@ -15,9 +15,9 @@ export class GithubApi {
         .then(res => { return res.json() })
         .then(res => {
             if (res) {
-              let arr = res;
-              let result = [].map.call(arr, function(element) {
-                  let map = {
+              const arr = res;
+              const result = [].map.call(arr, function(element) {
+                  const map = {
                   name: element.commit.committer.name,
                   email: element.commit.committer.email,
                   date: DateUtils.sliceDate(element.commit.committer.date),

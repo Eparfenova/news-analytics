@@ -16,9 +16,9 @@ export class NewsApi {
           })
           .then(res => { return res.json() })
           .then(res => {
-            let arr = res.articles;
-            let result = [].map.call(arr, function(element) {
-              let map = {
+            const arr = res.articles;
+            const result = [].map.call(arr, function(element) {
+              const map = {
                 title: element.title,
                 name: element.source.name,
                 date: DateUtils.sliceDate(element.publishedAt),
@@ -27,7 +27,7 @@ export class NewsApi {
               }
               return map;
             });
-             return result;
+            return result;
           })    
           .catch((err) => {
             console.log(err);
