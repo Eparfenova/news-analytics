@@ -1,0 +1,29 @@
+.comments__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+    color: #1A1B22;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 425px) {
+    .comments__link {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .comments__link {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .comments__link {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

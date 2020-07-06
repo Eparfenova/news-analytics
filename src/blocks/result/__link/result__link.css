@@ -1,0 +1,40 @@
+.result__link {
+    max-width: 233px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #1A1B22;
+    text-decoration: none;
+    margin-bottom: 72px;
+    margin-right: 104px;
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 425px) {
+    .result__link {
+        margin-left: 16px;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .result__link {
+        margin-left: 16px;
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .result__link {
+        margin-left: 16px;
+        margin-right: 40px;
+        margin-top: 8px;
+        margin-bottom: 34px;
+    }
+}

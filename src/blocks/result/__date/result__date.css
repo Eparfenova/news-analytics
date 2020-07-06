@@ -1,0 +1,27 @@
+.result__date {
+    margin-top: 20px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 769px) {
+    .result__date {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+    .result__date {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .result__date {
+
+    }
+}

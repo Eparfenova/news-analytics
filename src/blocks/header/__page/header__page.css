@@ -1,0 +1,38 @@
+@import url(./_theme/_dark/header__page_theme_dark.css);
+@import url(./_theme/_dark/_pg/_active/header__page_theme_dark_pg_active.css);
+@import url(./_pg/_active/header__page_pg_active.css);
+
+.header__page {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-left: 34px;
+    text-decoration: none;
+    color: #B6BCBF;
+
+}
+
+.header__page:hover {
+    color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 767px) {
+    .header__page {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 11px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header__page {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,38 @@
+.result__card {
+    max-width: 400px;
+    margin-right: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+    
+    
+}
+
+@media screen and (max-width: 425px) {
+    .result__card {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .result__card {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+    }
+}
+    
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .result__card {
+        max-width: 224px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+    }
+}

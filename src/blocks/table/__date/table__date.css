@@ -1,0 +1,28 @@
+.table__date {
+    width: 110px;
+    margin-right: 54px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 80px;
+    color: #1A1B22;
+}
+
+@media screen and (max-width: 425px) {
+    .table__date {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .table__date {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .table__date {
+        margin-right: 0px;
+    }
+}

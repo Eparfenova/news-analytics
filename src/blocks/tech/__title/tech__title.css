@@ -1,0 +1,37 @@
+.tech__title {
+    max-width: 344px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    margin-bottom: 162px;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .tech__title {
+        max-width: 288px;
+        margin-bottom: 39px;
+        font-size: 30px;
+        line-height: 40px;  
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .tech__title {
+        max-width: 288px;
+        margin-bottom: 39px;
+        font-size: 30px;
+        line-height: 40px;  
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .tech__title {
+        margin-bottom: 40px;
+        font-size: 30px;
+        line-height: 34px;
+    }
+}

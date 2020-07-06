@@ -1,0 +1,11 @@
+@import url(../not-found/__img/not-found__img.css);
+@import url(../not-found/__subtitle/not-found__subtitle.css);
+@import url(../not-found/__title/not-found__title.css);
+
+.not-found {
+	padding-top: 80px;
+    margin: 0;
+	background: #F5F6F7;
+	overflow: hidden;
+	font-family: Roboto, Arial, sans-serif;
+}

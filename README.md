@@ -1,1 +1,10 @@
-https://github.com/Eparfenova/news-analytics.git
+# news-analytics.github.io
+
+  Версия 0.0.2
+  
+  Ссылка на репозиторий: https://github.com/Eparfenova/news-analytics.git
+
+  Сервис для анализа происходящих в мире событий. Его задача — установить, насколько популярны новости на определённую тему.
+
+
+

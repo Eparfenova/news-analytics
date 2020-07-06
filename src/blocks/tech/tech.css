@@ -1,0 +1,30 @@
+@import url(./__content/tech__content.css);
+@import url(./__images-container/tech__images-container.css);
+@import url(./__img/tech__img.css);
+@import url(./__title/tech__title.css);
+
+.tech {
+    background-color: #F5F6F7;
+    padding-top: 80px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+
+@media screen and (max-width: 425px) {
+    .tech {
+        padding-top: 32px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .tech {
+        padding-top: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .tech {
+        padding-top: 40px;
+    }
+}
+

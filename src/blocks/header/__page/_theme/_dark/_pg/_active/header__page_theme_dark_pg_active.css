@@ -1,0 +1,22 @@
+.header__page_theme_dark_pg_active {
+    color: #1A1B22;
+    padding-bottom: 26px;
+    border-bottom: 3px solid #1A1B22;
+}
+
+
+.header__page_theme_dark_pg_active:hover {
+    color: #1A1B22;
+}
+
+@media screen and (max-width: 425px) {
+    .header__page_theme_dark_pg_active {
+        padding-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .header__page_theme_dark_pg_active {
+        padding-bottom: 22px;
+    }
+}

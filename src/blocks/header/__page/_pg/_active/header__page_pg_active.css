@@ -1,0 +1,20 @@
+@import url(../../_theme/_dark/_pg/_active/header__page_theme_dark_pg_active.css);
+
+.header__page_pg_active {
+    color: #FFFFFF;
+    padding-bottom: 26px;
+    border-bottom: 3px solid #FFFFFF;
+
+}
+
+@media screen and (max-width: 425px) {
+    .header__page_pg_active {
+        padding-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .header__page_pg_active {
+        padding-bottom: 22px;
+    }
+}

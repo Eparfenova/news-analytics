@@ -1,0 +1,34 @@
+@import url(../__scale/_position/_down/table__scale_position_down.css);
+
+.table__scale {
+    padding-left: 150px;
+    margin-right: 104px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #1A1B22;
+}
+
+@media screen and (max-width: 425px) {
+    .table__scale {
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-bottom: 32px;
+        margin-right: 16px;
+
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .table__scale {
+        padding-top: 40px;
+        padding-left: 40px;
+        margin-right: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .table__scale {
+        margin-right: 40px;
+        padding-left: 104px;
+    }
+}

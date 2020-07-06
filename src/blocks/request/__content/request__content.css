@@ -1,0 +1,31 @@
+.request__content {
+    padding-left: 104px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+}
+
+@media screen and (max-width: 425px) {
+    .request__content {
+        padding-top: 16px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .request__content {
+        padding-top: 16px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .request__content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    }
+}

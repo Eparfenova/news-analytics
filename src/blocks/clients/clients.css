@@ -1,0 +1,43 @@
+@import url(./__content/clients__content.css);
+@import url(./__text/clients__text.css);
+@import url(./__title/clients__title.css);
+
+.clients {
+    margin-top: 80px;
+    margin-left: 104px;
+    padding-bottom: 94px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+@media screen and (max-width: 425px) {
+    .clients {
+        margin-top: 16px;
+        margin-left: 16px;
+        padding-bottom: 16px;
+        margin-right: 16px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .clients {
+        margin-top: 16px;
+        margin-left: 16px;
+        padding-bottom: 16px;
+        margin-right: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .clients {
+        margin-top: 26px;
+        margin-left: 40px;
+        padding-bottom: 32px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .clients {
+
+    }
+}
